@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+
+import subprocess
+import sys
+
+def start_nessus():
+    subprocess.run(['sudo', 'systemctl', 'start', 'nessusd.service'])
+    print("Nessus service has been started.")
+
+def stop_nessus():
+    subprocess.run(['sudo', 'systemctl', 'stop', 'nessusd.service'])
+    print("Nessus service has been stopped.")
+
+if __name__ == "__main__":
+    if len(sys.argv) == 2 and sys.argv[1] == '-s':
+        stop_nessus()
+    else:
+        start_nessus()
+    print("- Then go to https://localhost:8834/ to configure your scanner")
