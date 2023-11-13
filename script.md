@@ -82,6 +82,9 @@ sudo firewall-cmd --reload
 sudo firewall-cmd --list-all --zone=public
 
 
+
+
+
 Blocking ICMP packets on firewalld:  
 ```
 sudo firewall-cmd --set-target=DROP --zone=public --permanent
@@ -108,11 +111,14 @@ apt remove telnet ftp ftpd tftp talk talkd tftp tftpd
 
 
 
-
-
 -usermctc
 -inspecsudo
+-nameser
 -sshard 
-Validate changes have taken effect via:
-sudo sshd -T | less
+-limitssh         . #ssh limit subnet and ICMP packets
+- maskapps           #hace mask a ftp
 -fired
+-nameserver
+-roothi   #checa los .zsh .bash
+crontt   crontab for user and sudo 
+crontodo  checa crontabs en todos los usuarios

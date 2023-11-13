@@ -9,3 +9,9 @@ sudo firewall-cmd --permanent --zone=public \
 sudo firewall-cmd --reload
 sudo firewall-cmd --list-all --zone=public
 
+#Blocking ICMP packets on firewalld:  
+
+sudo firewall-cmd --set-target=DROP --zone=public --permanent
+sudo firewall-cmd -zone=public --remove-icmp-block={echo-request,echo-reply, \  
+timestamp-request,timestamp-reply} --permanent
+sudo firewall-cmd --reload

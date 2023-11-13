@@ -20,12 +20,12 @@ ip addr | grep "inet "
 echo""
 
 
-echo "$(ip addr show ens192 | awk '/inet / {print $2}' | cut -d/ -f1)"
+echo "$(ip addr show eth0 | awk '/inet / {print $2}' | cut -d/ -f1)"
 
 
 
 # Agregamos el mensaje con la IP local
-echo -e "\n\n\n\nTu IP es: $(/usr/sbin/ifconfig ens192 | grep "inet " | awk '{print $2}')"
+echo -e "\n\n\n\nTu IP es: $(/usr/sbin/ifconfig eth0 | grep "inet " | awk '{print $2}')"
 echo ""
-echo "  *** user ***"
+echo "user:"
 whoami
