@@ -16,13 +16,6 @@ echo "Se ha realizado el respaldo y se han eliminado las líneas con 'alias' de 
 
 
 echo ""
-
-#custom alias
-echo 'alias ll="lsd -lh --group-dirs=first"' >> ~/.bashrc
-echo 'alias la="lsd -a --group-dirs=first"' >> ~/.bashrc
-echo 'alias l="lsd --group-dirs=first"' >> ~/.bashrc
-echo 'alias lla="lsd -lha --group-dirs=first"' >> ~/.bashrc
-echo 'alias ls="lsd --group-dirs=first"' >> ~/.bashrc
 echo 'alias cat="/bin/batcat --paging=never"' >> ~/.bashrc
 echo 'alias catn="cat"' >> ~/.bashrc00
 echo 'alias catnl="batcat"' >> ~/.bashrc
@@ -93,7 +86,7 @@ echo "alias g4rji='f(){ git clone https://github.com/4rji/4rji.git && cd 4rji/; 
 
 echo "alias redr='sudo systemctl restart NetworkManager'"  >> ~/.bashrc
 echo "alias dormir='sudo systemctl suspend'"  >> ~/.bashrc
-echo "alias redr='sudo systemctl restart NetworkManager'"  >> ~/.bashrc
+echo "alias redr='sudo systemctl restart networking'"  >> ~/.bashrc
 #echo 'alias mygpu="DRI_PRIME=1 glxinfo | grep \"OpenGL renderer\"" ' >> ~/.bashrc
 echo 'alias pantallin="xrandr --output DP-1 --rotate left --auto --left-of eDP-1" ' >> ~/.bashrc
 
