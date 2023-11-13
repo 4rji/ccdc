@@ -10,8 +10,6 @@ mired               copia eth0 al portapapeles y muestra todas las ips del equip
 miwl                copia wlan0 al portapapeles                                                        
 lfcd                para moverme con cd  #copiar el plugin a zsh                                       
 repos               vuelve a instalar por defaul los repos de kali cuando no funcionan.                
-generador_palabras  usa crunch para generar diccionarios
-cleanvpnproton  	Limpia los archivos de proton para que funcionen en arch
 copyssh             copia mui clave a una maquina remota                                               
 jfirefox            firejail a firefox                                                                 
 surfeando2          crea una conexion ssh para proxychains por 1080                                    
@@ -38,8 +36,8 @@ cscp                copiar archivos en scp en lugar de sftp
 lid                 cambia el comportamiento de lid laptop                                             
 cxx                 chmod +x y luego ./ ejecuta el script                                              
 4rji                el programa y busqueda de scripts                                                  
-4rjic		        Muestra una lista simple de 4rji
-4rjia		        Muestra los alias
+4rjic		    Muestra una lista simple de 4rji
+4rjia		    Muestra los alias
 fixssh              arregla cuando la clave ssh no se conecta porque hay un duplicado.                 
 csftp               copia un archivo por sftp hubicado en home, pregunta la IP y usuario y archivo     
 ssa_arch            ssa para arch linux                                                                
@@ -62,6 +60,7 @@ pchains             inicia proxychain ssh -D 1080 IP, ejecutar con ip despues
 adio                borra un archivo con scrub                                                         
 adios               borra toda una carpeta con scrub                                                   
 herrabin            actualiza los binarios                                                             
-genarc              genera archivos conjuntos de 100 MB    
+genarc              genera archivos conjuntos de 100 MB                                                
+#instalaciones                                                                                         
 instsurf            instala surfeando                                                                  
 instparu            instala para y scrub para arch (debian no necesita)                                
