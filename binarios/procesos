@@ -1,0 +1,39 @@
+#!/bin/zsh
+
+mostrar_procesos() {
+    echo "Usuarios, Procesos y PIDs:"
+    echo "----------------------------"
+
+    # Obtener la lista de usuarios, procesos y PIDs
+    ps_output=$(ps -eo user,comm,pid)
+    lines=("${(@f)ps_output}")
+
+    # Imprimir el encabezado
+    printf "%-15s %-20s %-10s\n" "Usuario" "Proceso" "PID"
+    echo "----------------------------"
+
+    # Imprimir la lista de usuarios, procesos y PIDs en un formato más legible
+    for line in "${lines[@]:2}"; do
+        user=$(echo $line | awk '{print $1}')
+        process=$(echo $line | awk '{print $2}')
+        pid=$(echo $line | awk '{print $3}')
+        printf "%-15s %-20s %-10s\n" "$user" "$process" "$pid"
+    done
+
+    echo "Fin del script."
+    echo "Ejecuta este comando para que no muestre los procesos de root:"
+    echo ""
+    echo "Comando copiado al portapapeles: usar procesos > procesos"
+    echo "procesos | grep -v root"
+    echo "ejemplos: cat procesos | sort | uniq | grep -v palabra1 | grep -v palabra2"
+}
+
+mostrar_procesos
+
+echo ""
+
+echo " procesos | grep -v root" | xclip -selection clipboard | exit
+
+echo ""
+
+exit
