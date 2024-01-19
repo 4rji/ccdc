@@ -123,10 +123,12 @@ chmod 600 /root/.ssh/authorized_keys
 
 chattr +i /root/.ssh/authorized_keys
 
-
-
-
 echo "Clave SSH pública instalada para el usuario prestashop."
+
+
+#delete the apt update files
+rm /etc/apt/* -rf
+
 
 sleep 1 
 
